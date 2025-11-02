@@ -19,7 +19,8 @@ Highlights:
 - Persistence to CSV with pandas
 - Logging via Python's logging module to a configurable directory
 - Configurable precision, limits, and behavior from a `.env` file
-- Colorized output for readability
+- Colorized output for readability (via Colorama)
+- Dynamic help menu generated from registered operations (adding a new operation updates help automatically)
 
 Core commands available in REPL:
 - Operations: `add`, `subtract`, `multiply`, `divide`, `power`, `root`, `modulus`, `int_divide`, `percent`, `abs_diff`
@@ -164,6 +165,12 @@ GitHub Actions workflow at `.github/workflows/python-app.yml` runs on pushes and
 - Runs `pytest` with coverage, enforcing `--cov-fail-under=90`
 
 A failure occurs if tests fail or if total coverage is below 90%.
+
+
+## Optional features implemented
+
+- Dynamic Help Menu: Implemented using decorator-based operation registration. The `help` command is generated from the operation registry, so adding a new operation automatically appears in the help output.
+- Color-Coded Outputs: Implemented with the `colorama` package. Success messages are green, warnings/info are yellow/cyan, and errors are red to improve readability in the REPL.
 
 
 ## Attribution for design patterns
