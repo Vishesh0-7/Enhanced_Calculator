@@ -134,6 +134,8 @@ Error handling:
 - Division by zero, invalid roots, non-numeric input, and values exceeding limits are reported clearly.
 - Persistence issues raise a `PersistenceError` and are surfaced cleanly.
 
+## Screenshot
+![alt text](/assets/Screenshot.png)
 
 ## Testing instructions
 
